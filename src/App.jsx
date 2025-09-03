@@ -7,6 +7,7 @@ import Login from './Components/Login';
 import { Link } from 'react-router';
 import ProtectedRoutes from './Components/ProtectedRoutes';
 import { useState } from 'react';
+import Accordion from './Components/Accordion/Accordion';
 
 
 function App() {
@@ -16,10 +17,11 @@ function App() {
        <BrowserRouter>
         <div style={{background:'black',color:'white', display:'flex',alignContent:'space-between'}}>
           <h3>Welcome</h3>
-           <div style={{marginLeft:'500px',display:'flex'}}>
+           <div style={{marginLeft:'400px',display:'flex',marginTop:'20px'}}>
             <Link to='/about' style={{paddingRight:'20px'}}>About</Link>
             <Link to='/profile'style={{paddingRight:'20px'}}>Profile</Link>
             <Link to='/Login'>Login</Link>
+            <Link to='/accordion' style={{paddingRight:'20px'}}>Accordion</Link>
             <select value={lan} onChange={(e)=>setLan(e.target.value)} >
               <option value={"en"}>English</option>
               <option value={"tel"}>Telugu</option>
@@ -38,6 +40,7 @@ function App() {
         
         
         <Route path='/Login' Component={Login} />
+        <Route path='/accordion' Component={Accordion} />
       </Routes>
       </BrowserRouter>
       </>
