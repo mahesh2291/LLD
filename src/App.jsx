@@ -8,6 +8,7 @@ import { Link } from 'react-router';
 import ProtectedRoutes from './Components/ProtectedRoutes';
 import { useState } from 'react';
 import Accordion from './Components/Accordion/Accordion';
+import Comment from './Components/Comment/Comment';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
            <div style={{marginLeft:'400px',display:'flex',marginTop:'20px'}}>
             <Link to='/about' style={{paddingRight:'20px'}}>About</Link>
             <Link to='/profile'style={{paddingRight:'20px'}}>Profile</Link>
-            <Link to='/Login'>Login</Link>
+            <Link to='/Login' style={{paddingRight:'20px'}}>Login</Link>
+            <Link to='/comment' style={{paddingRight:'20px'}}>Comment</Link>
             <Link to='/accordion' style={{paddingRight:'20px'}}>Accordion</Link>
             <select value={lan} onChange={(e)=>setLan(e.target.value)} >
               <option value={"en"}>English</option>
@@ -41,6 +43,7 @@ function App() {
         
         <Route path='/Login' Component={Login} />
         <Route path='/accordion' Component={Accordion} />
+        <Route path='comment' Component={Comment} />
       </Routes>
       </BrowserRouter>
       </>
