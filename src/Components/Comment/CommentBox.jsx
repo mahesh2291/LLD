@@ -2,7 +2,7 @@ const CommentBox=({data})=>{
     return data.map((comment)=>{
         return (
             <div style={{borderLeft:'2px solid black'}}>
-            <div style={{display: 'flex'}}>
+            <div style={{display: 'flex',paddingLeft:'10px'}}>
                 <img  width={'40px'} src="https://cdn-icons-png.flaticon.com/256/2111/2111589.png" />
                 <p style={{marginLeft:'10px'}}><strong>{comment.userName}</strong></p>
             </div>

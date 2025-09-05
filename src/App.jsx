@@ -9,6 +9,7 @@ import ProtectedRoutes from './Components/ProtectedRoutes';
 import { useState } from 'react';
 import Accordion from './Components/Accordion/Accordion';
 import Comment from './Components/Comment/Comment';
+import ImageSlider from './Components/Imageslider/ImageSlider';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Link to='/Login' style={{paddingRight:'20px'}}>Login</Link>
             <Link to='/comment' style={{paddingRight:'20px'}}>Comment</Link>
             <Link to='/accordion' style={{paddingRight:'20px'}}>Accordion</Link>
+             <Link to='/slider' style={{paddingRight:'20px'}}>Slider</Link>
             <select value={lan} onChange={(e)=>setLan(e.target.value)} >
               <option value={"en"}>English</option>
               <option value={"tel"}>Telugu</option>
@@ -44,6 +46,7 @@ function App() {
         <Route path='/Login' Component={Login} />
         <Route path='/accordion' Component={Accordion} />
         <Route path='comment' Component={Comment} />
+        <Route path='/slider' Component={ImageSlider} />
       </Routes>
       </BrowserRouter>
       </>
