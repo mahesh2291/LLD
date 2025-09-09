@@ -10,6 +10,7 @@ import { useState } from 'react';
 import Accordion from './Components/Accordion/Accordion';
 import Comment from './Components/Comment/Comment';
 import ImageSlider from './Components/Imageslider/ImageSlider';
+import Pagination from './Components/Pagination/Pagination';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Link to='/comment' style={{paddingRight:'20px'}}>Comment</Link>
             <Link to='/accordion' style={{paddingRight:'20px'}}>Accordion</Link>
              <Link to='/slider' style={{paddingRight:'20px'}}>Slider</Link>
+             <Link to='/pagination' style={{paddingRight:'20px'}}>Pagination</Link>
             <select value={lan} onChange={(e)=>setLan(e.target.value)} >
               <option value={"en"}>English</option>
               <option value={"tel"}>Telugu</option>
@@ -42,7 +44,7 @@ function App() {
        <Route path='/profile' Component={Profile} />
         </Route>
         
-        
+        <Route Component={Pagination} path='/pagination' />
         <Route path='/Login' Component={Login} />
         <Route path='/accordion' Component={Accordion} />
         <Route path='comment' Component={Comment} />
